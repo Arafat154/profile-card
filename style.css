@@ -134,9 +134,13 @@ body{
 }
 .flip-card:hover .html .span-bar:before {
    animation: html 3s;
+   -webkit-animation: html 3s;
+   -moz-animation: html 3s;
 }
 .flip-card:hover .css .span-bar:before {
    animation: css 3s;
+   -webkit-animation: css 3s;
+   -moz-animation: css 3s;
 }
 .bar{
    margin: 10px 0 0 0;
