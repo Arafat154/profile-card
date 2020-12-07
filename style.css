@@ -1,0 +1,221 @@
+*{
+   margin    : 0;
+   padding   : 0;
+   box-sizing: border-box;
+}
+body{
+   background: #262626;
+}
+.flip-card{
+   width        : 300px;
+   height       : 450px;
+   border-radius: 15px;
+   position     : absolute;
+   top          : 50%;
+   left         : 50%;
+   transform    : translate(-50%,-50%);
+}
+.flip-card-inner{
+   width          : 100%;
+   height         : 100%;
+   position       : relative;
+   transform-style: preserve-3d;
+   transition     : 1s;
+}
+.flip-card .flip-card-front img{
+   width  : 60px;
+   padding: 15px 0 0 10px;
+}
+.flip-card .flip-card-front{
+   width              : 100%;
+   height             : 100%;
+   position           : absolute;
+   background-image   : linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.2)), url("../img/1.jpg");
+   background-size    : 100%;
+   background-position: center;
+   border-radius      : 15px;
+   box-shadow         : 0 0 20px 6px rgba(0,0,0,0.6);
+   backface-visibility: hidden;
+   z-index            : 1;
+}
+.flip-card .flip-card-front h4{
+   color         : black;
+   position      : absolute;
+   bottom        : 30%;
+   left          : 5%;
+   font-family   : 'Sansita Swashed', cursive;
+   letter-spacing: 1px;
+   font-size     : 20px;
+}
+.flip-card .flip-card-front small{
+   color      : #ffeaa7;
+   position   : absolute;
+   bottom     : 25%;
+   left       : 5%;
+   font-family: 'Sansita Swashed', cursive;
+   font-size  : 15px;
+}
+.flip-card .flip-card-front span{
+   height       : 40px;
+   width        : 40px;
+   background   : rgba(0, 0, 0, 0.5);
+   border-radius: 50%;
+   display      : block;
+   position     : absolute;
+   bottom       : 5%;
+   left         : 50%;
+   transform    : translateX(-50%);
+   color        : #fee40d;
+   font-size    : 20px;
+   text-align   : center;
+   line-height  : 40px;
+}
+.flip-card .flip-card-front p{
+   position : absolute;
+   bottom   : 15%;
+   left     : 50%;
+   transform: translateX(-50%);
+   color    : #fff;
+   font-size: 20px;
+   font-family: 'Amaranth', sans-serif;
+}
+.flip-card-back{
+   width              : 100%;
+   height             : 100%;
+   position           : absolute;
+   transform          : rotateY(180deg);
+   border-radius      : 15px;
+   box-shadow         : 0 0 20px 6px rgba(0, 0, 0, 0.6);
+   backface-visibility: hidden;
+   background         : #333333;
+   text-align         : center;
+   padding            : 10px 20px 0px 20px;
+}
+.flip-card .flip-card-back img{
+   margin       : 10px 0 7px 0;
+   width        : 100px;
+   border       : 1px solid #5352ed;
+   border-radius: 50%;
+}
+.flip-card .flip-card-back p.country{
+   color: #0cfbb2;
+   font-family: 'Amaranth', sans-serif;
+}
+.flip-card .flip-card-back p.quote{
+   width: 180px;
+   margin: 10px auto;
+   color: #fff;
+   font-family: 'Amaranth', sans-serif;
+}
+.flip-card .flip-card-back .link{
+   margin: 15px 0 0 0;
+}
+.flip-card .flip-card-back .link a{
+   font-size   : 27px;
+   margin-right: 32px;
+   color       : orange;
+}
+.flip-card .flip-card-back .link a:hover{
+   color: #0cfbb2;
+}
+.flip-card .flip-card-back .link a:nth-child(4){
+   margin-right: 0;
+}
+.flip-card .skill{
+   padding-top: 10px;
+}
+.flip-card .skill p.skill-text{
+   color      : #0cfbb2;
+   font-family: 'Amaranth', sans-serif;
+}
+
+.flip-card:hover .flip-card-inner{
+   transform: rotateY(180deg);
+}
+.flip-card:hover .html .span-bar:before {
+   animation: html 3s;
+}
+.flip-card:hover .css .span-bar:before {
+   animation: css 3s;
+}
+.bar{
+   margin: 10px 0 0 0;
+}
+.bar .html{
+   margin-bottom: 15px;
+}
+.bar .html .upper,
+.bar .css .upper{
+   overflow: hidden;
+}
+.bar .html h4,
+.bar .css h4{
+   float      : left;
+   color      : #fff;
+   font-family: 'Amaranth', sans-serif;
+}
+.bar .html p.percent,
+.bar .css p.percent{
+   float        : right;
+   width        : 33px;
+   height       : 16px;
+   background   : orange;
+   color        : #000;
+   font-size    : 13px;
+   font-weight  : bold;
+   border-radius: 5px;
+   text-align   : center;
+   line-height  : 20px;
+}
+.bar .html .span-bar,
+.bar .css .span-bar{
+   display   : block;
+   height    : 10px;
+   background: #172f27;
+   border    : 2px solid #2e4b41;
+   overflow  : hidden;
+}
+.bar .html .span-bar:before,
+.bar .css .span-bar:before{
+   content   : '';
+   display   : block;
+   background: #0cfbb2;
+   width     : 87%;
+   height    : 7px;
+}
+.bar .css .span-bar:before{
+   width: 83%;
+}
+.email{
+   width        : 95%;
+   height       : auto;
+   background   : #0cfbb2;
+   margin       : 20px auto;
+   padding      : 10px 0 10px 0;
+   border-radius: 20px;
+}
+.email a{
+   color          : #000;
+   text-decoration: none;
+   font-size      : 15px;
+   font-family    : 'Amaranth', sans-serif;
+}
+.email:hover{
+   background: #79f7d1;
+}
+@keyframes html{
+   0%{
+      width: 0%;
+   }
+   100%{
+      width: 87%;
+   }
+}
+@keyframes css{
+   0%{
+      width: 0%;
+   }
+   100%{
+      width: 83%;
+   }
+}
