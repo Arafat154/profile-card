@@ -20,7 +20,7 @@ body{
    height         : 100%;
    position       : relative;
    transform-style: preserve-3d;
-   transition     : 1s;
+   transition     : 1.5s;
 }
 .flip-card .flip-card-front img{
    width  : 60px;
